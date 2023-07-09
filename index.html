@@ -9,22 +9,115 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<meta name="google-site-verification" content="ZNwFZIDr6b0PIz5Lf_f-vi9eyYvv7jDXigamEjWeP7s" />
+		<style>
+			:root {
+				--background-color: white;
+				--text-color: black;
+			}
+	
+			[data-theme="dark"] {
+				--background-color: black;
+				--text-color: white;
+			}
+	
+			body {
+				background-color: var(--background-color);
+				color: var(--text-color);
+			}
+
+			.switch {
+				position: relative;
+				display: inline-block;
+				width: 60px;
+				height: 34px;
+			  }
+			  
+			  .switch input {
+				opacity: 0;
+				width: 0;
+				height: 0;
+			  }
+			  
+			  .slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #ccc;
+				-webkit-transition: .4s;
+				transition: .4s;
+			  }
+			  
+			  .slider:before {
+				position: absolute;
+				content: "";
+				height: 26px;
+				width: 26px;
+				left: 4px;
+				bottom: 4px;
+				background-color: white;
+				-webkit-transition: .4s;
+				transition: .4s;
+			  }
+			  
+			  input:checked + .slider {
+				background-color: #2196F3;
+			  }
+			  
+			  input:focus + .slider {
+				box-shadow: 0 0 1px #2196F3;
+			  }
+			  
+			  input:checked + .slider:before {
+				-webkit-transform: translateX(26px);
+				-ms-transform: translateX(26px);
+				transform: translateX(26px);
+			  }
+			  
+			  /* Rounded sliders */
+			  .slider.round {
+				border-radius:34px;
+			  }
+			  
+			  .slider.round:before {
+				  border-radius:50%;
+			  }
+
+			  .dark-mode-label, .switch {
+				vertical-align: middle;
+				margin-top: 16px;
+			  }
+			  
+			  
+			  
+		</style>
 	</head>
 	<body class="is-preload">
-
+		
 		<!-- Header -->
-			<header id="header">
-				<div class="inner black">
-					<a href="#" class="image avatar"><img src="images/profile.JPG" alt="" /></a>
-					<h1><strong>Amirreza Hosseini</strong> <br>	
-					<a href="mailto:hosseiniamirreza2001@gmail.com">Email</a> <br>
-					<a href="https://amiirhosseini.ece.iut.ac.ir/">Academic Website</a></h1>
-				</div>
-			</header>
-
+		<header id="header">
+			<div class="inner black">
+			  <a href="#" class="image avatar"><img src="images/profile.JPG" alt="" /></a>
+			  <h1><strong>Amirreza Hosseini</strong> <br>  
+			  <a href="mailto:hosseiniamirreza2001@gmail.com">Email</a> <br>
+			  <a href="https://amiirhosseini.ece.iut.ac.ir/">Academic Website</a></h1>
+			  <span class="dark-mode-label">Dark mode:</span>
+			  <label class="switch">
+				<input type="checkbox" onclick="toggleTheme()">
+				<span class="slider"></span>
+			  </label>
+			</div>
+		  </header>
+		  
 		<!-- Main -->
 			<div id="main">
-
+					<style>
+						#one p {
+							text-align: justify;
+						}
+					</style>
 				<!-- One -->
 					<section id="one">
 						<header class="major">
@@ -65,16 +158,28 @@
 
 				<!-- Two -->
 					<section id="two">
+						<style>
+							#two article p {
+								text-align: justify;
+							}							
+						</style>
 						<header class="major">
 						<h2>Projects</h2>
 						</header>
 						<div class="row">
+							
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/posts/projects/smart bump/photo_2023-01-30_08-44-23.jpg" class="image fit thumb"><img src="images/posts/projects/smart bump/photo_2023-01-30_08-44-23.jpg" alt="" /></a>
 								<h3>Smart Speed Bump</h3>
 								<p>A model of smart bumper with embedded system elements that modifies it height with the speed of accrossing vehicles.
 									first, detection speed with two lazers and LDRs and second, determine the proper height and the last, give pulse to the motor to do so.
-									Using STMf103 with ARM architecture as a brain of this cyber physical system. Currently the paper "Intelligent Traffic Control with Smart Speed Bumps" is under review but you can have access to the codes trough<a href="https://github.com/Amiirhosseini/SSBump"here</a>.</p>
+									Using STMf103 with ARM architecture as a brain of this cyber physical system. Currently the paper "Intelligent Traffic Control with Smart Speed Bumps" is under review but you can have access to the codes trough <a href="https://github.com/Amiirhosseini/SSBump">here. </a>.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/posts/projects/BMSIM/主图-2.webp" class="image fit thumb"><img src="images/posts/projects/BMSIM/主图-2.webp" alt="" /></a>
+								<h3>BMSim simulator</h3>
+								<p>An Event-Driven Simulator for Performance Evaluation of Bluetooth Mesh Networks.
+									some of my simulations using this environment about some real scenarios. visit my codes through <a href="https://github.com/Amiirhosseini/BMSIM">my Github rep</a>.</p>
 							</article>
 
 							<article class="col-6 col-12-xsmall work-item">
@@ -552,6 +657,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				function toggleTheme() {
+					if (document.documentElement.getAttribute("data-theme") === "dark") {
+						document.documentElement.removeAttribute("data-theme");
+					} else {
+						document.documentElement.setAttribute("data-theme", "dark");
+					}
+				}
+			</script>
 	</body>
 </html>
