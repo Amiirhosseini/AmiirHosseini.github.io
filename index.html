@@ -98,18 +98,23 @@
 		
 		<!-- Header -->
 		<header id="header">
-			<div class="inner black">
-			  <a class="image avatar"><img src="images/ASL_1996.JPG" alt="" /></a>
-			  <h1><strong>Amirreza Hosseini</strong> <br>  
-			  <a href="mailto:hosseiniamirreza2001@gmail.com" target="_blank">Email</a> <br>
-			  <!-- <a href="https://amiirhosseini.ece.iut.ac.ir/"  target="_blank">Academic Website</a></h1> -->
-			  <span class="dark-mode-label">Dark mode:</span>
-			  <label class="switch">
-				<input type="checkbox" onclick="toggleTheme()">
-				<span class="slider"></span>
-			  </label>
+			<div class="inner black" style="text-align: right;">
+				<a class="image avatar" style="display: inline-block; margin-bottom: 10px;"><img src="images/ASL_1996.JPG" alt="" /></a>
+				<h1 style="margin-bottom: 10px;"><strong>Amirreza Hosseini</strong></h1>
+				<a href="mailto:hosseiniamirreza2001@gmail.com" target="_blank" style=" margin-bottom: 10px; text-decoration: underline; font-size: 20px;">Email</a>
+				<!-- <a href="https://amiirhosseini.ece.iut.ac.ir/"  target="_blank" style="display: block; margin-bottom: 10px;">Academic Website</a> -->
+				<div style="display: flex; justify-content: right; align-items: center;">
+					<span class="dark-mode-label" style="margin-right: 12px; font-size: 20px;">Dark mode:</span>
+					<label class="switch">
+						<input type="checkbox" onclick="toggleTheme()">
+						<span class="slider"></span>
+					</label>
+				</div>
 			</div>
-		  </header>
+		</header>
+
+
+
 		  
 		<!-- Main -->
 			<div id="main">
@@ -136,26 +141,57 @@
 						</ul>
 					</section>
 
-					<section id="four">
-						<header class="major">
-						<h2>Education</h2>
-						</header>
-						<p>
-							<strong><b> • Bachelor of Science in Computer Engineering</b></strong> -- 2019-2023 <br>
-                			<a href="https://iut.ac.ir"  target="_blank">Isfahan University of Technology</a> (IUT)         <br>
-							Completed - Intelligence computer systems (tuition waved) <br>
-							GPA: 17.66 out of 20 (converted: 3.71/4) <br>
-							Project title: <i>Edge Computing Empowers Federated Learning in Resource-Constrained IoT Networks</i> <br>
-							Supervisor: <a href="https://khorsandi.iut.ac.ir/"  target="_blank">Dr. Amir Khorsandi</a> <br>
-						</p>
-							<p>
-							<strong><b>• Diploma Degree in Mathematics and Physics discipline</b></strong> -- 2015-2018 <br>
-								<a href="https://am2-sch.ir/"  target="_blank">Nokhbegan-e Tehran</a> <br>
-								High-rank high school in Tehran, Iran <br>
-								GPA: 4/4						
-							</p>
+			<!-- Education -->
+			<section id="four">
+				<header class="major">
+					<h2>Education</h2>
+				</header>
+				<div>
+					<strong><b> • Bachelor of Science in Computer Engineering</b></strong>
+					<div style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2019-2023</div>
+					<p>
+						<a href="https://iut.ac.ir"  target="_blank">Isfahan University of Technology</a> (IUT) <br>
+						Completed - Intelligence computer systems (tuition waved) <br>
+						GPA: 17.66 out of 20 (converted: 3.71/4) <br>
+						Project title: <i>Edge Computing Empowers Federated Learning in Resource-Constrained IoT Networks</i> <br>
+						Supervisor: <a href="https://khorsandi.iut.ac.ir/"  target="_blank">Dr. Amir Khorsandi</a>
+					</p>
+				</div>
+				<div>
+					<strong><b>• Diploma Degree in Mathematics and Physics discipline</b></strong>
+					<div style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2015-2018</div>
+					<p>
+						<a href="https://am2-sch.ir/"  target="_blank">Nokhbegan-e Tehran</a> <br>
+						High-rank high school in Tehran, Iran <br>
+						GPA: 4/4
+					</p>
+				</div>
+			</section>
 
-					</section>
+
+				
+				<!-- Publications -->
+			<section id="publications">
+				<header class="major">
+					<h2>Publications</h2>
+				</header>
+				<!-- Publication Item -->
+				<div class="col-6 col-12-xsmall work-item">
+					<a href="https://ieeexplore.ieee.org/document/10365343" target="_blank" style="text-decoration: none; color: inherit;">
+						<div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; cursor: pointer; transition: transform .2s; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+							<h3>Intelligent Traffic Control with Smart Speed Bumps</h3>
+							<p style="text-align: justify;">This paper introduces the Smart Speed Bump (SSBump), a novel traffic calming solution that leverages the Internet of Things (IoT) and innovative non-Newtonian fluid materials to enhance road safety, optimize emergency response times, and improve the overall driving experience. Published in the 2023 7th International Conference on Internet of Things and Applications (IoT).</p>
+						</div>
+					</a>
+				</div>
+				<!-- Add more publication items as needed -->
+			</section>
+
+
+
+
+
+
 
 				<!-- Two -->
 					<section id="two">
@@ -165,7 +201,7 @@
 							}							
 						</style>
 						<header class="major">
-						<h2>Projects and publications</h2>
+						<h2>Projects</h2>
 						</header>
 						<div class="row">
 							
@@ -298,12 +334,15 @@
 					</section>
 
 				<!-- Three -->
-					<section id="three">
-						<h2>A Little More About Me</h2>
-						<strong>Alongside my interests in Science and Technology, some of my other hobbies are:</strong>
-						<p>> Playing musical instruments such as guitar and piano and gaining knowledge in musical notes and harmonics.<br>
-						> Hold three musical concerts for charity purposes for the Iran Society of Deaf People Family with about 800 audience members. </p>
-						<div class="row">
+				<section id="three">
+					<h2>A Little More About Me</h2>
+					<strong>Alongside my interests in Science and Technology, some of my other hobbies are:</strong>
+					<p style="text-align: justify;">
+						> Playing musical instruments such as guitar and piano and gaining knowledge in musical notes and harmonics.<br>
+						> Hold three musical concerts for charity purposes for the Iran Society of Deaf People Family with about 800 audience members.<br>
+						> In my leisure time, I find joy in the exhilaration of bicycle rides and the tranquility of swimming.<br>
+					</p>
+					<div class="row">
 							
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
