@@ -96,22 +96,36 @@
 	</head>
 	<body class="is-preload">
 		
-		<!-- Header -->
-		<header id="header">
-			<div class="inner black" style="text-align: right;">
-				<a class="image avatar" style="display: inline-block; margin-bottom: 10px;"><img src="images/ASL_1996.JPG" alt="" /></a>
-				<h1 style="margin-bottom: 10px;"><strong>Amirreza Hosseini</strong></h1>
-				<a href="mailto:hosseiniamirreza2001@gmail.com" target="_blank" style=" margin-bottom: 10px; text-decoration: underline; font-size: 20px;">Email</a>
-				<!-- <a href="https://amiirhosseini.ece.iut.ac.ir/"  target="_blank" style="display: block; margin-bottom: 10px;">Academic Website</a> -->
-				<div style="display: flex; justify-content: right; align-items: center;">
-					<span class="dark-mode-label" style="margin-right: 12px; font-size: 20px;">Dark mode:</span>
-					<label class="switch">
-						<input type="checkbox" onclick="toggleTheme()">
-						<span class="slider"></span>
-					</label>
-				</div>
-			</div>
-		</header>
+<!-- Header -->
+<header id="header">
+	<div class="inner black" style="text-align: right;">
+		<a class="image avatar" style="display: inline-block; margin-bottom: 10px;"><img src="images/ASL_1996.JPG" alt="" /></a>
+		<h1 style="margin-bottom: 10px;"><strong>Amirreza Hosseini</strong></h1>
+		<a href="mailto:hosseiniamirreza2001@gmail.com" target="_blank" style="margin-bottom: 10px; text-decoration: underline; font-size: 20px;">Email</a>
+		<!-- <a href="https://amiirhosseini.ece.iut.ac.ir/"  target="_blank" style="display: block; margin-bottom: 10px;">Academic Website</a> -->
+		<div class="dark-mode" style="display: flex; justify-content: right; align-items: center;">
+			<span class="dark-mode-label" style="margin-right: 12px; font-size: 20px;">Dark mode:</span>
+			<label class="switch">
+				<input type="checkbox" onclick="toggleTheme()">
+				<span class="slider"></span>
+			</label>
+		</div>
+	</div>
+</header>
+
+<!-- CSS Media Query -->
+<style>
+	@media screen and (max-width: 915px) {
+		#header .inner {
+			text-align: center !important;
+		}
+		#header .dark-mode {
+			justify-content: center !important;
+		}
+	}
+</style>
+
+
 
 
 
