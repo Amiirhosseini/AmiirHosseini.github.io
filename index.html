@@ -19,6 +19,27 @@
 				--background-color: black;
 				--text-color: white;
 			}
+			
+			[data-theme="dark"] .publication-item {
+				background-color: var(--background-color);
+				color: var(--text-color);
+			}
+			
+			[data-theme="dark"] .publication-item .text-container h3,
+			[data-theme="dark"] .publication-item .text-container p {
+				color: var(--text-color);
+			}
+			
+			[data-theme="dark"] .publication-item .date-section {
+				background-color: #f0f0f0;
+				color: #000;
+			}
+			
+			/* Add this new rule */
+			[data-theme="dark"] .no-dark-mode {
+				background-color: #f0f0f0;
+				color: black;
+			}
 	
 			body {
 				background-color: var(--background-color);
@@ -90,7 +111,63 @@
 				margin-top: 16px;
 			  }
 			  
-			  
+			  .publication-item {
+				display: flex;
+				align-items: flex-start;
+				border: 1px solid #ccc;
+				padding: 15px;
+				margin-bottom: 20px;
+				cursor: pointer;
+				transition: transform 0.2s;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				border-radius: 5px;
+				background-color: #fff;
+			}
+			
+			.image-container {
+				flex-shrink: 0;
+				margin-right: 15px;
+			}
+			
+			.cover-image {
+				width: 100%;
+				max-width: 100px;
+				border-radius: 5px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				transition: transform 0.2s;
+			}
+			
+			.text-container {
+				flex-grow: 1;
+			}
+			
+			.publication-item h3 {
+				margin-top: 0;
+			}
+			
+			.publication-item p {
+				text-align: justify;
+				margin-bottom: 0;
+			}
+			
+			.publication-item:hover .cover-image {
+				transform: scale(1.05);
+			}
+			
+			@media (max-width: 600px) {
+				.publication-item {
+					flex-direction: column;
+					align-items: center;
+				}
+				.image-container {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.cover-image {
+					max-width: 150px;
+				}
+			}
+			
 			  
 		</style>
 	</head>
@@ -106,8 +183,8 @@
 		<div class="dark-mode" style="display: flex; justify-content: right; align-items: center;">
 			<span class="dark-mode-label" style="margin-right: 12px; font-size: 20px;">Dark mode:</span>
 			<label class="switch">
-				<input type="checkbox" onclick="toggleTheme()">
-				<span class="slider"></span>
+				<input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+				<span class="slider round"></span>
 			</label>
 		</div>
 	</div>
@@ -162,7 +239,7 @@
 				</header>
 				<div>
 					<strong><b> • Bachelor of Science in Computer Engineering</b></strong>
-					<div style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2019-2023</div>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2019-2023</div>
 					<p>
 						<a href="https://iut.ac.ir"  target="_blank">Isfahan University of Technology</a> (IUT) <br>
 						Completed - Intelligence computer systems (tuition waved) <br>
@@ -173,7 +250,7 @@
 				</div>
 				<div>
 					<strong><b>• Diploma Degree in Mathematics and Physics discipline</b></strong>
-					<div style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2015-2018</div>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2015-2018</div>
 					<p>
 						<a href="https://am2-sch.ir/"  target="_blank">Nokhbegan-e Tehran</a> <br>
 						High-rank high school in Tehran, Iran <br>
@@ -192,12 +269,21 @@
 				<!-- Publication Item -->
 				<div class="col-6 col-12-xsmall work-item">
 					<a href="https://ieeexplore.ieee.org/document/10365343" target="_blank" style="text-decoration: none; color: inherit;">
-						<div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; cursor: pointer; transition: transform .2s; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border-radius: 5px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-							<h3>Intelligent Traffic Control with Smart Speed Bumps</h3>
-							<p style="text-align: justify;">This paper introduces the Smart Speed Bump (SSBump), a novel traffic calming solution that leverages the Internet of Things (IoT) and innovative non-Newtonian fluid materials to enhance road safety, optimize emergency response times, and improve the overall driving experience. Published in the 2023 7th International Conference on Internet of Things and Applications (IoT). [most read preprint from Isfahan University Of Technology in one week on ResearchGate]</p>
+						<div class="publication-item" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+							<div class="image-container">
+								<img src="./images/posts/Publications/SSBump/cover.png" alt="Cover Image" class="cover-image">
+							</div>
+							<div class="text-container">
+								<h3>Intelligent Traffic Control with Smart Speed Bumps</h3>
+								<p>This paper introduces the Smart Speed Bump (SSBump), a novel traffic calming solution that leverages the Internet of Things (IoT) and innovative non-Newtonian fluid materials to enhance road safety, optimize emergency response times, and improve the overall driving experience. Published in the 2023 7th International Conference on Internet of Things and Applications (IoT). [most read preprint from Isfahan University Of Technology in one week on ResearchGate]</p>
+							</div>
+							<div></div>
 						</div>
 					</a>
 				</div>
+				
+				
+				
 				<!-- Add more publication items as needed -->
 			</section>
 
@@ -347,6 +433,24 @@
 						</ul>
 					</section>
 
+
+					<!-- Peer Reviewer -->
+<section id="peer-reviewer">
+    <header class="major">
+        <h2>Reviews</h2>
+    </header>
+    <div>
+        <strong>Paper Peer Reviewer</strong>
+        <div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">Jun 2024</div>
+        <p>
+            <a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank">Neurocomputing Journal</a> <br>
+            Neurocomputing - Elsevier | 2023 Impact Factor: 6.0 | Cite Score: 10.8 | Q1. <br>
+            Certificate: <a href="./files/Certificate_NEUCOM_Recognised.pdf" target="_blank">Download Certificate</a>
+        </p>
+    </div>
+</section>
+
+
 				<!-- Three -->
 				<section id="three">
 					<h2>A Little More About Me</h2>
@@ -379,6 +483,7 @@
 					<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AZh-EPkcJndYZ639zMBsejtDRdx-aX4Lp4YR7_BzQFQ&cl=ffffff&w=a"></script>
 				</div>
 					</section>
+					
 
 				<!-- Four -->
 <!-- 				
