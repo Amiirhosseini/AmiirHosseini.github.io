@@ -1,17 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Amirreza Hosseini</title>
+		<title>Amirreza Hosseini, EIT</title>
 		<link rel="icon" type="image/x-icon" href="/images/head/browser.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<meta name="google-site-verification" content="ZNwFZIDr6b0PIz5Lf_f-vi9eyYvv7jDXigamEjWeP7s" />
-		<meta name="description" content="Amirreza Hosseini's portfolio showcasing projects, publications, and education.">
-		<meta property="og:title" content="Amirreza Hosseini">
-		<meta property="og:description" content="Portfolio of Amirreza Hosseini, a Computer Engineering graduate.">
-		<meta property="og:image" content="https://amiirhosseini.ir/">
-		<meta property="og:url" content="https://amiirhosseini.ir/">
+		<meta name="description" content="Amirreza Hosseini, EIT (APEGA) — MSc researcher in AI for biomedical ultrasound at the University of Calgary. Portfolio of projects, publications, teaching, and professional experience.">
+		<meta name="keywords" content="Amirreza Hosseini, EIT, APEGA, University of Calgary, AI, Machine Learning, Ultrasound, Computer Engineering, Software Developer, Research">
+		<meta name="author" content="Amirreza Hosseini, EIT">
+		<meta property="og:title" content="Amirreza Hosseini, EIT">
+		<meta property="og:description" content="Portfolio of Amirreza Hosseini, EIT — MSc researcher in AI-based biomedical engineering at the University of Calgary.">
+		<meta property="og:image" content="https://amiirhosseini.com/images/ASL_1996.JPG">
+		<meta property="og:url" content="https://amiirhosseini.com/">
+		<meta property="og:type" content="website">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Amirreza Hosseini, EIT">
+		<meta name="twitter:description" content="Portfolio of Amirreza Hosseini, EIT — MSc researcher in AI-based biomedical engineering at the University of Calgary.">
+		<meta name="twitter:image" content="https://amiirhosseini.com/images/ASL_1996.JPG">
 		<style>
 			:root {
 				--background-color: #fafafa;
@@ -516,6 +523,184 @@
 					margin-bottom: 12px;
 				}
 			}
+
+
+
+			@keyframes pulseDot {
+				0%, 100% { opacity: 1; transform: scale(1); }
+				50% { opacity: 0.6; transform: scale(1.3); }
+			}
+
+			.credential-line {
+				display: block;
+				font-size: 0.85em;
+				color: var(--secondary-text);
+				margin-top: 4px;
+				margin-bottom: 6px;
+				font-style: italic;
+			}
+
+			.experience-card {
+				background: var(--card-bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 18px 22px;
+				margin-bottom: 18px;
+				box-shadow: 0 2px 8px var(--shadow-color);
+				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.experience-card::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 4px;
+				background: linear-gradient(180deg, var(--accent-color), var(--accent-hover));
+				opacity: 0.85;
+			}
+
+			.experience-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 26px var(--shadow-color);
+				border-color: var(--accent-color);
+			}
+
+			.experience-card .role {
+				font-weight: 700;
+				font-size: 1.05em;
+			}
+
+			.experience-card .org {
+				color: var(--secondary-text);
+				font-size: 0.95em;
+				margin-bottom: 4px;
+			}
+
+			.languages-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 16px;
+				margin-top: 10px;
+			}
+
+			.language-card {
+				background: var(--card-bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 16px 20px;
+				box-shadow: 0 2px 8px var(--shadow-color);
+				transition: all 0.3s ease;
+			}
+
+			.language-card:hover {
+				transform: translateY(-3px);
+				border-color: var(--accent-color);
+				box-shadow: 0 8px 20px var(--shadow-color);
+			}
+
+			.language-card .lang-name {
+				font-weight: 700;
+				font-size: 1.1em;
+				color: var(--text-color);
+			}
+
+			.language-card .lang-detail {
+				color: var(--secondary-text);
+				font-size: 0.9em;
+				margin-top: 4px;
+			}
+
+			.references-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 16px;
+				margin-top: 10px;
+			}
+
+			.reference-card {
+				background: var(--card-bg);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				padding: 18px 20px;
+				box-shadow: 0 2px 8px var(--shadow-color);
+				transition: all 0.3s ease;
+			}
+
+			.reference-card:hover {
+				transform: translateY(-3px);
+				border-color: var(--accent-color);
+				box-shadow: 0 8px 20px var(--shadow-color);
+			}
+
+			.reference-card .ref-name {
+				font-weight: 700;
+				font-size: 1.05em;
+				color: var(--text-color);
+			}
+
+			.reference-card .ref-title {
+				color: var(--secondary-text);
+				font-size: 0.9em;
+				margin: 4px 0;
+			}
+
+			.cert-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 12px;
+				margin-top: 10px;
+			}
+
+			.cert-item {
+				background: var(--card-bg);
+				border: 1px solid var(--border-color);
+				border-left: 4px solid var(--accent-color);
+				border-radius: 10px;
+				padding: 12px 16px;
+				font-size: 0.92em;
+				color: var(--text-color);
+				transition: all 0.3s ease;
+			}
+
+			.cert-item:hover {
+				transform: translateX(4px);
+				border-color: var(--accent-color);
+				box-shadow: 0 4px 14px var(--shadow-color);
+			}
+
+			.award-item {
+				padding: 10px 14px;
+				margin-bottom: 8px;
+				background: var(--card-bg);
+				border: 1px solid var(--border-color);
+				border-radius: 10px;
+				transition: all 0.3s ease;
+				display: flex;
+				align-items: flex-start;
+				gap: 10px;
+			}
+
+			.award-item:hover {
+				transform: translateX(6px);
+				border-color: var(--accent-color);
+				box-shadow: 0 4px 14px var(--shadow-color);
+			}
+
+			.award-item .award-icon {
+				color: var(--accent-color);
+				font-size: 1.1em;
+				margin-top: 2px;
+				flex-shrink: 0;
+			}
+
+			.award-item.featured {
+				background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(39, 174, 96, 0.04));
+				border-color: var(--accent-color);
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -527,7 +712,7 @@
 				<a class="image avatar float-animation" style="display: inline-block; margin-bottom: 10px;">
 					<img src="images/ASL_1996.JPG" alt="Amirreza Hosseini's Avatar" />
 				</a>
-				<h1 style="margin-bottom: 10px;"><strong>Amirreza Hosseini</strong></h1>
+				<span class="credential-line">Amirreza (Amir) Hosseini &middot; EIT</span>
 				<a href="mailto:hosseiniamirreza2001@gmail.com" target="_blank" style="margin-bottom: 10px; text-decoration: underline; font-size: 20px;">Email</a>
 				<div class="dark-mode" style="display: flex; justify-content: right; align-items: center;">
 					<span class="dark-mode-label" style="margin-right: 12px; font-size: 20px;">Dark mode:</span>
@@ -544,9 +729,29 @@
 				<header class="major">
 					<h2>About Me</h2>
 				</header>
-				<p class="fade-in">Currently, I am a master of science student at University of Calgary, one of the most reputative universities in Canada. According to <a href="https://edurank.org/uni/university-of-calgary/rankings/" target="_blank">Edu rank</a>. With a GPA of 3.85. I am also a B.Sc. graduated student majoring in<b> Computer Engineering</b> at the <b>Isfahan University of Technology <a href="https://www.iut.ac.ir" target="_blank">(IUT)</a></b> 
-					(ranked within the top 5 universities in Iran according to <a href="https://www.topuniversities.com/universities/isfahan-university-technology" target="_blank">QS ranking</a> and <a href="https://www.usnews.com/education/best-global-universities/isfahan-university-of-technology-502590" target="_blank"> U.S. News </a>) with a GPA of 3.71/4 (Ranked within the top 20% of my graduating class).
-					I've got a wide range of programming knowledge for both hardware and software. Explore my projects in more detail below.
+				<p class="fade-in">
+					I am an <b>Engineer-in-Training (EIT)</b> registered with the
+					<a href="https://www.apega.ca/" target="_blank" rel="noopener">Association of Professional Engineers and Geoscientists of Alberta (APEGA)</a>,
+					and an <b>MSc candidate in Electrical and Computer Engineering</b> at the
+					<a href="https://www.ucalgary.ca/" target="_blank">University of Calgary</a>
+					(CGPA 3.85/4) with research focused on <i>AI-based prediction of cattle carcass traits using ultrasound imaging</i>
+					under <a href="https://profiles.ucalgary.ca/kartikeya-murari" target="_blank">Dr. Kartikeya Murari</a> and
+					<a href="https://profiles.ucalgary.ca/amin-komeili" target="_blank">Dr. Amin Komeili</a>.
+				</p>
+				<p class="fade-in">
+					I previously earned my <b>BSc in Computer Engineering</b> from the
+					<a href="https://www.iut.ac.ir" target="_blank">Isfahan University of Technology (IUT)</a>
+					— ranked within the top 5 universities in Iran by
+					<a href="https://www.topuniversities.com/universities/isfahan-university-technology" target="_blank">QS</a> and
+					<a href="https://www.usnews.com/education/best-global-universities/isfahan-university-of-technology-502590" target="_blank">U.S. News</a>
+					— with a CGPA of 3.71/4. I am a member of the
+					<a href="https://www.ucalgary.ca/hunter-hub" target="_blank">Hunter Hub Innovation Sandbox</a>,
+					and a <b>Lab2Market Validate</b> alumnus through Edmonton Unlimited and the University of Alberta.
+				</p>
+				<p class="fade-in">
+					My work spans <b>applied AI &amp; computer vision</b>, <b>embedded / IoT systems</b>,
+					<b>full-stack web development</b> (ASP.NET Core, Django, PHP), and <b>Linux server administration</b>.
+					I am eligible to work in Canada with a valid work permit.
 				</p>
 				<ul class="actions">
 					<li><a href="./files/AmirrezaHosseini-CV.pdf" class="button icon solid fa-download" target="_blank">CV PDF</a></li>
@@ -926,15 +1131,55 @@
 				</div>
 
 				<div class="col-6 col-12-xsmall work-item">
+					<a href="https://opg.optica.org/abstract.cfm?uri=Microscopy-2025-JM4A.9" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+						<div class="publication-item">
+							<div class="image-container">
+								<img src="images/posts/Logos/logo_optica_white_box_rgb_300dpi.png" alt="Oxygen Saturation Paper Cover" class="cover-image">
+							</div>
+							<div class="text-container">
+								<h3>A Data-Driven Approach for Extracting Oxygen Saturation from In-Vivo Fiber Photometry Data</h3>
+								<p><i>A. Bisht, M. Omidi, A. Hosseini, K. Murari</i> — Novel Techniques in Microscopy (Optica), JM4A.9, 2025. This paper proposes a machine learning-based method to extract SO₂ levels from in-vivo fiber photometry signals. Collaboratively conducted with researchers at the University of Calgary, it demonstrates how AI can improve non-invasive optical biosensing.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-6 col-12-xsmall work-item">
 					<div class="publication-item">
 						<div class="image-container">
-							<img src="images/posts/Logos/logo_optica_white_box_rgb_300dpi.png" alt="Oxygen Saturation Paper Cover" class="cover-image">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="Alberta Biomedical Engineering Conference" class="cover-image uofc-logo">
 						</div>
 						<div class="text-container">
-							<h3>A Data-Driven Approach for Extracting Oxygen Saturation from In-Vivo Fiber Photometry Data</h3>
-							<p>This paper proposes a machine learning-based method to extract SO₂ levels from in-vivo fiber photometry signals. Collaboratively conducted with researchers at the University of Calgary, it demonstrates how AI can improve non-invasive optical biosensing. Submitted and presented as a novel contribution to bioengineering research.</p>
+							<h3>Automated Segmentation of Ribeye (Longissimus dorsi) Muscle in Bovine Ultrasound Images</h3>
+							<p><i>A. Hosseini, K. Murari, A. Komeili</i> — 26th Annual Alberta Biomedical Engineering Conference, 2025. Presents a deep-learning pipeline for automated segmentation of the Longissimus dorsi muscle in on-farm bovine ultrasound, supporting AI-based carcass-trait prediction for precision livestock farming.</p>
 						</div>
 					</div>
+				</div>
+
+				<div class="col-6 col-12-xsmall work-item">
+					<div class="publication-item">
+						<div class="image-container">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="Alberta Biomedical Engineering Conference" class="cover-image uofc-logo">
+						</div>
+						<div class="text-container">
+							<h3>Correlation of EMG Parameters to Fatigue Development in Cycling</h3>
+							<p><i>A. Parsaei, A. Hosseini, J. Aboodarda, A. Komeili</i> — 26th Annual Alberta Biomedical Engineering Conference, 2025. Investigates surface-EMG signal features and their correlation with neuromuscular fatigue progression during cycling, contributing to wearable performance-monitoring research.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-12-xsmall work-item">
+					<a href="https://www.researchgate.net/publication/374290508_Edge_Computing_Empowers_Federated_Learning_in_Resource-Constrained_IoT_Networks_Farsi" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+						<div class="publication-item">
+							<div class="image-container">
+								<img src="images/posts/Logos/iut.png" alt="IUT Logo" class="cover-image">
+							</div>
+							<div class="text-container">
+								<h3>Edge Computing Empowers Federated Learning in Resource-Constrained IoT Networks</h3>
+								<p><i>A. Hosseini, A. Khorsandi</i> — BSc Thesis, Isfahan University of Technology, 2023. Explores how edge-computing architectures can offload aggregation, lower energy cost, and accelerate convergence for federated learning in low-power IoT environments.</p>
+							</div>
+						</div>
+					</a>
 				</div>
 			</section>
 
@@ -1053,17 +1298,20 @@
 						<div class="text-container">
 							<strong>University of Calgary</strong>
 							<p>
+								<b>ENER 570 – Automation and Controls</b> (Winter 2026) <br>
+								<i>Class size: 27 students</i><br><br>
+
 								<b>SENG 511 – Software Project Management</b> (Fall 2025) <br>
 								<i>Class size: 315 students</i><br><br>
 
 								<b>ENSF 380 – Object-Oriented Principles</b> (Summer 2025) <br>
 								<i>Class size: 23 students</i><br><br>
 
-								<b>ENER 570 – Automation and Controls</b> (Winter 2025) <br>
-								<i>Class size: 27 students</i><br><br>
-
 								<b>ENSF 692 – Programming Fundamentals for Data Engineering</b> (Spring 2025) <br>
-								<i>Class size: 20 students</i>
+								<i>Class size: 20 students</i><br><br>
+
+								<b>ENER 570 – Automation and Controls</b> (Winter 2025) <br>
+								<i>Class size: 27 students</i>
 							</p>
 						</div>
 					</div>
@@ -1102,7 +1350,7 @@
 				</header>
 				<div class="fade-in">
 					<strong><b> • Master of Science in Electrical and Computer Engineering</b></strong>
-					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2024-Present</div>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2024-2026</div>
 					<p>
 						<a href="https://www.ucalgary.ca/" target="_blank">
 							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 35px; height: 35px; margin-right: 5px;">
@@ -1112,6 +1360,16 @@
 						CGPA: 3.85/4 <br>
 						Thesis title: <i>On-farm Prediction of Cattle Carcass Trait Using AI-based Technologies</i> <br>
 						Supervisors: <a href="https://profiles.ucalgary.ca/kartikeya-murari" target="_blank">Dr. Kartikeya Murari</a>, <a href="https://profiles.ucalgary.ca/amin-komeili" target="_blank">Dr. Amin Komeili</a>
+					</p>
+				</div>
+				<div class="fade-in">
+					<strong><b> • Engineer-in-Training (EIT) — Professional Designation</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2026-Present</div>
+					<p>
+						<a href="https://www.apega.ca/" target="_blank" rel="noopener">
+							Association of Professional Engineers and Geoscientists of Alberta (APEGA)
+						</a> <br>
+						Registered <b>Engineer-in-Training (EIT)</b> — pursuing the path toward Professional Engineer (P.Eng.) licensure under APEGA's mentorship and competency-based assessment framework.
 					</p>
 				</div>
 				<div class="fade-in">
@@ -1145,16 +1403,54 @@
 					<h2>Awards and Honors</h2>
 				</header>
 				<div style="text-align: justify;">
-					<ul style="list-style-type: none; padding-left: 0;">
-						<li class="fade-in"><strong>•</strong> Hunter Centre Entrepreneurship Award ($1,500, 2025) – University of Calgary</li>
-						<li class="fade-in"><strong>•</strong> ESE Graduate Research Award ($1,100, 2025) – University of Calgary</li>
-						<li class="fade-in"><strong>•</strong> International Graduate Tuition Award ($3,060, 2024) – University of Calgary</li>
-						<li class="fade-in"><strong>•</strong> Fully funded offers from LSU, Iowa State, SLU (MSc) and CU Boulder (PhD)</li>
-						<li class="fade-in"><strong>•</strong> Iranian Exceptionally Talented Student – Direct MSc admission to AUT, IUT, SBU, KNTU</li>
-						<li class="fade-in"><strong>•</strong> Top 2% in Iranian University entrance exam (Math & Physics, 150K+ participants)</li>
-						<li class="fade-in"><strong>•</strong> Top 5% in Iranian University entrance exam (Foreign Languages, 140K+ participants)</li>
-						<li class="fade-in"><strong>•</strong> Top 10-15% ranking in IUT ECE Department</li>
-					</ul>
+					<div class="award-item featured fade-in">
+						<span class="award-icon icon solid fa-award"></span>
+						<span><strong>APEGA Ivan Finlay Leadership Award</strong> ($1,250, 2026) — Association of Professional Engineers and Geoscientists of Alberta</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-trophy"></span>
+						<span><strong>Mitacs Business Strategy Internship</strong> ($10,000, 2026) — Mitacs &amp; Edmonton Unlimited (Lab2Market Validate)</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-medal"></span>
+						<span><strong>FGS Transformative Talent Internship Scholarship</strong> ($5,000, 2025) — Faculty of Graduate Studies, University of Calgary</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-medal"></span>
+						<span><strong>TTI Work-Integrated Learning &amp; Completion Awards</strong> ($4,250, 2025) — University of Calgary</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-star"></span>
+						<span><strong>Hunter Centre Entrepreneurship Award</strong> ($1,500, 2025) — University of Calgary</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-star"></span>
+						<span><strong>International Graduate Tuition Award</strong> ($3,080, 2024–2025) — University of Calgary</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-star"></span>
+						<span><strong>ESE Graduate Research Awards</strong> ($1,100, 2024–2025; $700, 2025–2026) — University of Calgary</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-graduation-cap"></span>
+						<span>Fully funded MSc/PhD offers from <b>LSU</b>, <b>Iowa State</b>, <b>SLU</b>, and <b>CU Boulder</b></span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-graduation-cap"></span>
+						<span>Iranian <b>Exceptionally Talented Student</b> — direct MSc admission offers (AUT, IUT, SBU, KNTU)</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-chart-line"></span>
+						<span>Top <b>2%</b> in Iranian National University Entrance Exam — Math &amp; Physics (150K+ participants)</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-chart-line"></span>
+						<span>Top <b>5%</b> in Iranian National University Entrance Exam — Foreign Languages (140K+ participants)</span>
+					</div>
+					<div class="award-item fade-in">
+						<span class="award-icon icon solid fa-chart-line"></span>
+						<span>Top <b>10–15%</b> ranking in IUT ECE Department; Humane Society recognition</span>
+					</div>
 				</div>
 			</section>
 			
@@ -1162,29 +1458,138 @@
 				<header class="major">
 					<h2>Professional Experience</h2>
 				</header>
-				<div class="fade-in">
-					<strong><b>• Webmaster (Part-time)</b></strong>
-					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">July 2025-Present</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Lab2Market Validate Intern</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">January 2026 – April 2026</div>
+					<div class="org">
+						<a href="https://lab2market.ca/validate" target="_blank" rel="noopener">Edmonton Unlimited &amp; University of Alberta</a> — Edmonton, AB
+					</div>
 					<p>
-						<a href="https://iqst.ucalgary.ca" target="_blank">
-							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 5px;">
+						• Conducted customer-discovery interviews with producers, feedlot workers, and veterinarians to validate market fit for an AI-based portable ultrasound carcass-grading system. <br>
+						• Performed market research and competitor analysis; developed a Business Model Canvas and value proposition for precision livestock farming technology. <br>
+						• Coordinated UI/SOP revisions and usability testing for a Beta-1 device prototype, translating user feedback into technical specifications.
+					</p>
+				</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Social Enterprise Analyst Intern</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">October 2025 – February 2026</div>
+					<div class="org">
+						<a href="https://www.innovatecalgary.com/" target="_blank" rel="noopener">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 26px; height: 26px; margin-right: 5px;">
+							Innovate Calgary, University of Calgary
+						</a>
+					</div>
+					<p>
+						• Conducted customer discovery, pilot design, and prototype development for the Mission to Market Hackathon 2.0. <br>
+						• Conducted environmental scans, feasibility studies, and landscape analyses for social-enterprise development. <br>
+						• Managed financial planning, budgeting, and impact measurement for non-profits transitioning to sustainable models. <br>
+						• Supported Technology Helps and Volunteer Alberta in transitioning from grant-funded programs to social enterprises.
+					</p>
+				</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Research Assistant</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">September 2024 – Present</div>
+					<div class="org">
+						<a href="https://www.ucalgary.ca/" target="_blank" rel="noopener">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 26px; height: 26px; margin-right: 5px;">
+							iHADLab, University of Calgary
+						</a>
+					</div>
+					<p>
+						• Conducting graduate research on AI-based technologies for on-farm cattle carcass-trait prediction. <br>
+						• Developing algorithms for data-driven oxygen-saturation extraction from in-vivo fiber-photometry data. <br>
+						• Co-authoring peer-reviewed publications and conference papers with collaborators at U of C and partner institutions.
+					</p>
+				</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Webmaster (Part-time)</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">July 2025 – Present</div>
+					<div class="org">
+						<a href="https://iqst.ucalgary.ca" target="_blank" rel="noopener">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 26px; height: 26px; margin-right: 5px;">
 							Institute for Quantum Science and Technology (IQST), University of Calgary
-						</a> <br>
+						</a>
+					</div>
+					<p>
 						• Optimized backend infrastructure and streamlined database management (MariaDB), reducing query response times and improving reliability. <br>
 						• Redesigned and updated frontend pages using HTML/CSS for consistent styling and easier navigation. <br>
 						• Coordinated with faculty and staff to ensure timely content updates and accurate researcher profiles.
 					</p>
 				</div>
-				<div class="fade-in">
-					<strong><b>• Software Developer (Part-time)</b></strong>
-					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">June-August 2022</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Programmer</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">December 2023 – March 2024</div>
+					<div class="org">Sigma Gostar Aria — Tehran, Iran</div>
 					<p>
-						<a href="https://azmoontest.com/en" target="_blank">Azmoon Saz Mabna, Tehran, Iran</a> <br>
+						• Developed software solutions for business-process automation and system integration. <br>
+						• Implemented and maintained backend services supporting ERP/CRM workflows.
+					</p>
+				</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Software Developer</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">June 2022 – November 2023</div>
+					<div class="org">
+						<a href="https://azmoontest.com/en" target="_blank" rel="noopener">Azmoon Saz Mabna</a> — Tehran, Iran
+					</div>
+					<p>
 						• Developed ASP.NET Core MVC web applications for industrial testing workflows, improving reporting accuracy and automation. <br>
-						• Collaborated with engineers to troubleshoot critical bottlenecks, improving system performance and reliability.
+						• Collaborated with engineers to troubleshoot critical bottlenecks, improving system performance and reliability. <br>
+						• Implemented and maintained ERP/CRM modules and Linux/Ubuntu server deployments (SSH, Nginx, IIS Express).
+					</p>
+				</div>
+
+				<div class="experience-card fade-in">
+					<strong class="role"><b>Member — Hunter Hub Innovation Sandbox</b></strong>
+					<div class="no-dark-mode" style="float: right; background-color: #f0f0f0; padding: 5px; border-radius: 5px;">2025 – Present</div>
+					<div class="org">
+						<a href="https://www.ucalgary.ca/hunter-hub" target="_blank" rel="noopener">
+							<img src="images/posts/Logos/university-of-calgary-logo.png" alt="UofC Logo" class="logo uofc-logo" style="vertical-align: middle; width: 26px; height: 26px; margin-right: 5px;">
+							Hunter Hub for Entrepreneurial Thinking, University of Calgary
+						</a>
+					</div>
+					<p>
+						• Active member of the Innovation Sandbox community, collaborating on cross-disciplinary entrepreneurial initiatives, pitch events, and translation of academic research into commercial impact.
 					</p>
 				</div>
 			</section>
+
+			<section id="languages" class="section-gradient">
+				<header class="major">
+					<h2>Languages</h2>
+				</header>
+				<div class="languages-grid">
+					<div class="language-card fade-in">
+						<div class="lang-name">English</div>
+						<div class="lang-detail">IELTS Academic — Overall <b>7.0</b> &nbsp; (L 7.5 · R 7.0 · W 6.5 · S 6.0)</div>
+					</div>
+					<div class="language-card fade-in">
+						<div class="lang-name">Persian (Farsi)</div>
+						<div class="lang-detail">Native</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="certifications" class="section-gradient">
+				<header class="major">
+					<h2>Certifications &amp; Professional Development</h2>
+				</header>
+				<div class="cert-grid">
+					<div class="cert-item fade-in"><b>Engineer-in-Training (EIT)</b> — APEGA</div>
+					<div class="cert-item fade-in"><b>Huawei</b> — Seeds for the Future</div>
+					<div class="cert-item fade-in"><b>Sharif University</b> — 8th Winter Seminar Series</div>
+					<div class="cert-item fade-in"><b>Coursera</b> — Data Engineering</div>
+					<div class="cert-item fade-in"><b>LinkedIn Learning</b> — Python; Developing Your Emotional Intelligence</div>
+					<div class="cert-item fade-in"><b>Sololearn</b> — C, C++, C#, SQL, PHP</div>
+					<div class="cert-item fade-in"><b>Google / Coursera</b> — Introduction to Git and GitHub</div>
+				</div>
+			</section>
+
 
 			<section id="three" class="section-gradient">
 				<h2>A Little More About Me</h2>
@@ -1208,8 +1613,26 @@
 						</ul>
 					</div>
 				</div>
-				<div id="clustermaps-widget" style="width: 20%">
-					<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AZh-EPkcJndYZ639zMBsejtDRdx-aX4Lp4YR7_BzQFQ&cl=ffffff&w=a"></script>
+				<div id="clustermaps-widget" style="width: 20%; min-width: 120px;">
+					<script>
+						(function () {
+							try {
+								var s = document.createElement('script');
+								s.type = 'text/javascript';
+								s.id = 'clustrmaps';
+								s.async = true;
+								s.src = 'https://clustrmaps.com/map_v2.js?d=AZh-EPkcJndYZ639zMBsejtDRdx-aX4Lp4YR7_BzQFQ&cl=ffffff&w=a';
+								s.onerror = function () {
+									var w = document.getElementById('clustermaps-widget');
+									if (w) { w.style.display = 'none'; }
+								};
+								document.getElementById('clustermaps-widget').appendChild(s);
+							} catch (e) {
+								var w = document.getElementById('clustermaps-widget');
+								if (w) { w.style.display = 'none'; }
+							}
+						})();
+					</script>
 				</div>
 			</section>
 
